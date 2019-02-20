@@ -88,7 +88,9 @@ function love.draw()
 end
 
 function love.keypressed(k)
-	if k == '1' then
+	if k == 'escape' then
+		love.event.quit()
+	elseif k == '1' then
 		-- This reloads the game's code, to reflect changes you have made.
 		reload.reload_all()
 		print("reloaded")
